@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Launch",
+            "program": "${workspaceFolder}/LearnVar/target/debug/LearnVar",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Rust",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=LearnVar",
+                    "--package=LearnVar"
+                ],
+                "filter": {
+                    "name": "LearnVar",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}/LearnVar"
+        }
+    ]
+}
